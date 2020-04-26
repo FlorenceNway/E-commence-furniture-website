@@ -1,0 +1,271 @@
+
+.container {
+    max-width: 1400px;
+    margin: 0 5%;
+}
+
+/* Style the tab */
+  
+  /* Style the tabs that are used to open the tab content */
+  ul {
+      list-style-type: none;
+      padding: 0;
+  }
+
+  .left-menu li, .right-menu li, .footer-items li, .footer-social-media li{
+    cursor: pointer;
+    padding: 10px 10px;
+    transition: 0.3s;
+    display: inline
+  }
+  
+  a {
+      text-decoration: none;
+      color:black;
+  }
+  /* Change background color of buttons on hover */
+  .left-menu li:hover {
+    color: rgb(26, 182, 73);
+  }
+  
+  /* Create an active/current tablink class */
+  .left-menu li.active {
+    color: rgb(25, 173, 218);
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    border-top: none;
+  }
+
+
+  /* -----Home Page ------------------------------------- */
+  .grid-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr auto 1fr;
+    padding: 10px;
+  }
+
+  /* ---Header--- */
+  .right-menu li.icon {
+      display: none;
+  }
+
+  .menuItems {
+      display: flex;
+      justify-content: space-between; 
+  }
+  .right-menu li:last-child {
+      display: inline-block;
+  }
+
+  li.closebtn {
+      display: none;
+  }
+
+  /* .left-menu .tablinks{
+      visibility: 'visible'; 
+      display: inline;
+  } */
+  .left-menu .tablinks{
+    display: inline;
+  }
+  .left-menu {
+    display: block;
+  }
+  .mobile-left-menu {
+    display: none; 
+} 
+
+  /* --Search Section----- */
+  .grid-item2 {
+      display: flex;
+      justify-content: space-between;
+      
+  }
+  .searchBar {
+    width: 60%;
+    border-bottom: 1px solid #bfb9b9;
+    padding-top: 15px;
+    height: fit-content;
+  }
+
+  .searchBar img {
+    width: 30px;
+    height: 30px;
+}
+
+  .best-match {
+    width: 30%;
+    border-bottom: 1px solid #6d69699c;
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+}
+  
+
+  .best-match p {
+      display: inline;
+      margin-right: 5%;
+  }
+
+  .best-match span{
+    padding: 0;
+    font-size: 2em;
+    display: block;
+  }
+
+
+  /* --Footer --- */
+  .grid-item4 {
+      display: flex;
+      justify-content: center;
+  }
+
+  .footer {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+        
+  }
+  .footer-social-media {
+      margin-left: 30px;
+      /* display: block */
+  }
+
+
+
+  /* ---Carousel----- */
+  .carousel_wrapper {
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    overflow: hidden;
+    position: relative;
+  }
+  .carousel{
+    width: 100%;
+    height: 100%;
+  }
+  ul.carousel {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .carousel li {
+    width: 100%;
+    flex-shrink: 0;
+    
+  }
+  .carousel li img{
+    width: 100%;
+    height: 100%;
+  }
+
+  i.left-arrow, i.right-arrow{
+    font-size: 50px;
+    z-index: 1;
+    position: sticky;
+    top: 50%;
+    color: #f3eded;
+  }
+
+  i.right-arrow {
+    position: absolute;
+    right: 0;
+  }
+
+
+ 
+  /* ---Mobile------ */
+
+  @media screen and (max-width: 600px) {
+    .right-menu{
+        position: absolute;
+        right: 5%;
+    }
+
+    .right-menu li.icon {
+      display: inline;
+    }
+
+    .right-menu li:last-child {
+        display: none;
+    }
+
+    .mobile-left-menu .tablinks {
+        padding-top: 20px;
+        display: block; 
+        color: white;
+    }
+    
+  .mobile-left-menu {
+      display: none; 
+  } 
+  .mobile-left-menu li:hover {
+    color: rgb(26, 182, 73);
+  }
+  
+  .mobile-left-menu li.active {
+    color: rgb(25, 173, 218);
+  }
+
+  .left-menu {
+    display: none;
+  }
+
+    .overlay {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0);
+        overflow-x: hidden;
+        transition: 0.2s;
+      }
+
+      .closebtn {
+        font-size: 35px;
+        display: inline-block;
+        color: #a09c9c73;
+        padding: 0;
+        margin: 0px 10px;
+      }
+
+      .searchBar{
+          width: 100%;
+      }
+
+      .best-match {
+          display: none;
+      }
+
+      /* ---Footer---- */
+      .footer {
+        position: absolute;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .footer-social-media {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    .footer-items {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+    }
+    .footer-items li{
+        text-align: left;
+    }
+
+  }
+  
