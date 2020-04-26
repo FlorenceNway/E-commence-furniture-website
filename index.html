@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    
+    <title>SOFAS</title>
+</head>
+<body>
+<div class="container">
+
+<div class="grid-container" id="pageWrapper">
+    <section class="grid-item1">
+        <header class="menuItems">
+            <ul class="left-menu" >
+                  <li class='tablinks'><i class="fa fa-bars"></i></li>
+                  <li class="tablinks active" onclick="openTab(event, 'Home')">HOME</li>
+                  <li class="tablinks" onclick="openTab(event, 'Shop')">SHOP</li>
+                  <li class="tablinks" onclick="openTab(event, 'Magazine')">MAGAZINE</li>
+            </ul>
+            <ul class="mobile-left-menu" >
+                <li class='tablinks'><i class="fa fa-bars"></i></li>
+                <li class="tablinks active" onclick="openTab(event, 'Home')">HOME</li>
+                <li class="tablinks" onclick="openTab(event, 'Shop')">SHOP</li>
+                <li class="tablinks" onclick="openTab(event, 'Magazine')">MAGAZINE</li>
+           </ul>
+            <ul class="right-menu">
+                <li><i class="fas fa-shopping-cart"></i></li>
+                <li class="icon" onclick="clickMenuBarsIcon()">
+                    <i class="fa fa-bars"></i>
+                </li>
+                <a href="javascript:void(0)" onclick="closeNav()"></a>
+                <li>LOGIN</li>
+            </ul>  
+        </header>
+    </section>
+
+    <section class="grid-item2">
+        <div class='searchBar'>
+            <img src='./img/search.png'>
+        </div>
+        <div class='best-match'>
+            <p>Best match</p>
+            <span><i class="fas fa-angle-down"></i></span>
+        </div>
+    </section>
+
+    <section class="grid-item3">
+        <!-- Tab content -->
+        <div id="Home" class="tabcontent">
+            <div class="carousel_wrapper content">
+                <i id="prev" class="fa fa-angle-left left-arrow" aria-hidden="true"></i>
+                <i id="next" class="fa fa-angle-right right-arrow" aria-hidden="true"></i>
+                <ul class="carousel">
+                    <li><img src="./img/bedroom1.jpg" alt=""></li>
+                    <li><img src="./img/bedroom2.jpg" alt=""></li>
+                </ul>
+            </div>  
+        </div>
+        
+        <div id="Shop" class="tabcontent">
+            <h3>Shop</h3>
+            <p>Shop </p>
+        </div>
+        
+        <div id="Magazine" class="tabcontent">
+            <h3>Magazine</h3>
+            <p>Magazine </p>
+        </div>
+    </section>
+
+    <section class="grid-item4">
+        <footer class="footer">
+            <ul class="footer-items">
+                <li class="list-item"><a href="#about">ABOUT US</a></li>
+                <li class="list-item"><a href="#help">HOW CAN WE HELP</a></li>
+                <li class="list-item"><a href="#room">SHOP BY ROOM</a></li>
+                <li class="list-item"><a href="#style">SHOP BY STYLE</a></li>
+            </ul>
+        
+            <ul class="footer-social-media">
+                <li class="instagram"><a href=""><img src="./img/instagram.png" alt=""></a></li>
+                <li class="facebook"><a href=""><img src="./img/facebook .png" alt=""></a></li>
+                <li class="twitter"><a href=""><img src="./img/twitter.png" alt=""></a></li>
+            </ul>
+        </footer>
+    </section>
+</div>
+
+
+
+  
+
+
+</div>
+    <script src="products.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
