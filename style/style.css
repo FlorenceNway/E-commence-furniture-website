@@ -4,6 +4,15 @@
     margin: 0 5%;
 }
 
+@font-face {
+  font-family: "aventir";
+  src: url(./AvenirLTStd-Medium.otf);
+}
+*{
+  box-sizing: border-box;
+  font-family: "aventir";
+}
+
 /* Style the tab */
   
   /* Style the tabs that are used to open the tab content */
