@@ -97,13 +97,21 @@ for (i = 0; i < acc.length; i++) {
 }
 
 // ----Slider--------
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value;
 
-slider.oninput = function() {
-  output.innerHTML = `$${this.value}`;
+const sliderLeft = document.querySelector("#slider0to500");
+const sliderRight = document.querySelector("#slider51to1000");
+const from = document.querySelector("#from");
+const to = document.querySelector("#to");
+ 
+function fromSliderLeft(){
+    from.innerText =`£${sliderLeft.value}`;
 }
+function toSliderRight(){
+    to.innerText =`£${sliderRight.value}`;
+}
+sliderLeft.addEventListener("change",fromSliderLeft);
+sliderRight.addEventListener("change",toSliderRight);
+
 
 renderProducts(PRODUCTS)
 renderColors(PRODUCTS)

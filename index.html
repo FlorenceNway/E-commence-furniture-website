@@ -71,18 +71,24 @@
                          <div class="filter">FILTER BY</div>
 
                         <p class="accordion">Colour  <i class="fas fa-angle-down"></i></p>
-                        <div class="panel colorContainer">
-                            
+                        <div class="panel colorContainer"> 
                         </div>
 
                         <p class="accordion">Category  <i class="fas fa-angle-down"></i></p>
-                        <div class="panel categoryContainer">
-                            
+                        <div class="panel categoryContainer">  
                         </div>
-                        <h3>Price Range</h3>
-                        <div class="slidecontainer">
-                            <input type="range" min="100" max="1000" value="0" class="slider" id="myRange">
-                            <p><span class='startVal'>$0</span><span id="demo"></span></p>
+
+                        <h4>Price Range</h4>
+                        <div class="slidecontainer price-slider">
+                            <div id="rangeBox">    
+                                <div id="sliderBox">
+                                    <input type="range" id="slider0to500" step="5" min="0" max="500" value=0>
+                                    <input type="range" id="slider51to1000" step="5" min="50" max="1000" value=1000>
+                                </div>
+                                <p class='minmaxslider'><span id='from'>£0</span><span id='to'>£1000</span></p>
+                
+                           </div>
+                            
                         </div>
         
                 </aside>
@@ -134,6 +140,7 @@
     <script src="products.js"></script>
     <script src="./js/rendering.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/filter.js"></script>
    
 </body>
 </html>
