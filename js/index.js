@@ -38,7 +38,7 @@ const closeNav = () => {
     const row2 = document.querySelector(".grid-item2");
     const row3 = document.querySelector(".grid-item3");
     const row4 = document.querySelector(".grid-item4");
-    row2.style.display = 'block'
+    row2.style.display = 'flex'
     row3.style.display = 'flex'
     row4.style.display = 'flex'
 }  
@@ -79,4 +79,28 @@ const handleClick = (direction) => {
 
 prevBtn.addEventListener("click",() => handleClick('+'))
 nextBtn.addEventListener("click",() => handleClick('-'))
-   
+  
+// ------- Filter side ----------
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+// ----Slider--------
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = `$${this.value}`;
+}
