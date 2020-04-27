@@ -30,7 +30,7 @@
                 <li class="tablinks" onclick="openTab(event, 'Magazine')">MAGAZINE</li>
            </ul>
             <ul class="right-menu">
-                <li><i class="fas fa-shopping-cart"></i></li>
+                <li><i class="fas fa-shopping-cart" id="cart"></i><span class='cartqty'>0</span><li>
                 <li class="icon" onclick="clickMenuBarsIcon()">
                     <i class="fa fa-bars"></i>
                 </li>
@@ -44,10 +44,15 @@
         <div class='searchBar'>
             <img src='./img/search.png'>
         </div>
-        <div class='best-match'>
-            <p>Best match</p>
-            <span><i class="fas fa-angle-down"></i></span>
-        </div>
+        <div class="select" tabindex="1" id="sort-options">
+            <input class="options-select" name="sort" type="radio" value='DEFAULT' id="opt1" checked>
+            <label for="opt1" class="option">Best Match</label>
+            <input class="options-select" name="sort" type="radio" value='PRICE_ASC' id="opt2" >
+            <label for="opt2" class="option">Highest Price</label>
+            <input class="options-select" name="sort" type="radio" value='PRICE_DES' id="opt3" >
+            <label for="opt3" class="option">Lowest Price</label>
+        </div>    
+       
     </section>
 
     <section class="grid-item3">
