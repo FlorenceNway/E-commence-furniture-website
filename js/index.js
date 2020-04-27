@@ -107,3 +107,4 @@ slider.oninput = function() {
 
 renderProducts(PRODUCTS)
 renderColors(PRODUCTS)
+renderCategories(PRODUCTS)
