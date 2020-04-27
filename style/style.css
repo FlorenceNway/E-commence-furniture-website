@@ -191,9 +191,6 @@
   background-color: white;
   overflow: hidden;
 }
-.panel input[type='checkbox'] {
-  display: block;
-}
 
 .show-products {
   display: flex;
@@ -320,7 +317,6 @@
         position: fixed;
         top: 0;
         left: 0;
-        background-color: rgb(0,0,0);
         background-color: rgba(0,0,0);
         overflow-x: hidden;
         transition: 0.2s;

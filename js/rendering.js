@@ -1,8 +1,8 @@
+const items = document.querySelector(".items");
+const colorContainer = document.querySelector(".colorContainer");
 
-const items = document.querySelector(".items")
-
-const renderProduct = product => {
-    const li = `
+const renderProduct = (product) => {
+  const li = `
     <li class="item">
         <img src="./img/bedroom1.jpg" alt="" >
         <div class="item_details">
@@ -15,16 +15,36 @@ const renderProduct = product => {
             </header>
             <div class="cart"><i class="fas fa-shopping-cart"></i></div>
         </div>
-    </li>`
+    </li>`;
 
-    items.innerHTML += li
-}
+  items.innerHTML += li;
+};
 
-const renderProducts = productsToRender => {
-    items.innerHTML = ""
-    console.log(productsToRender.length)
-    productsToRender.forEach(product => {
-        renderProduct(product)
-    }) 
-}   
+const renderProducts = (productsToRender) => {
+  items.innerHTML = "";
 
+  productsToRender.forEach((product) => {
+    renderProduct(product);
+  });
+};
+
+const renderColors = (products) => {
+  const colours = [];
+  for (let i = 0; i < products.length; i++) {
+    products[i].colors.forEach((color) => {
+      if (!colours.includes(color)) {
+        colours.push(color);
+      }
+    });
+  }
+
+  colours.forEach((color) => {
+    const color_item = `
+        <div class='color'>
+        <input type="checkbox" id=${color} name=${color} value=${color}>
+        <label for=${color}> ${color} </label>
+        </div>`;
+
+    colorContainer.innerHTML += color_item;
+  });
+};
