@@ -1,5 +1,6 @@
 const PRODUCTS = [
     {
+      id: 1,
       name: "Jules",
       type: "Table",
       price: 970,
@@ -14,6 +15,7 @@ const PRODUCTS = [
       comfort_level: "Firm",
     },
     {
+      id: 2,
       name: "Ebba",
       type: "Chair",
       price: 270,
@@ -27,6 +29,7 @@ const PRODUCTS = [
       comfort_level: "Medium",
     },
     {
+      id: 3,
       name: "Melyssa",
       type: "Bed",
       price: 350,
@@ -41,6 +44,7 @@ const PRODUCTS = [
       comfort_level: "Medium",
     },
     {
+      id: 4,
       name: "Lincoln",
       type: "Bed",
       price: 935,
@@ -55,6 +59,7 @@ const PRODUCTS = [
       comfort_level: "Medium",
     },
     {
+      id: 5,
       name: "Merritt",
       type: "Bed",
       price: 850,
@@ -69,6 +74,7 @@ const PRODUCTS = [
       comfort_level: "Firm",
     },
     {
+      id: 6,
       name: "Willard",
       type: "Sofa",
       price: 560,
@@ -83,6 +89,7 @@ const PRODUCTS = [
       comfort_level: "Solid",
     },
     {
+      id: 7,
       name: "Luigi",
       type: "Table",
       price: 835,
@@ -97,6 +104,7 @@ const PRODUCTS = [
       comfort_level: "Medium",
     },
     {
+      id: 8,
       name: "Mark",
       type: "Table",
       price: 890,
@@ -111,6 +119,7 @@ const PRODUCTS = [
       comfort_level: "Soft",
     },
     {
+      id: 9,
       name: "Franz",
       type: "Sofa",
       price: 810,
@@ -125,6 +134,7 @@ const PRODUCTS = [
       comfort_level: "Soft",
     },
     {
+      id: 10,
       name: "Dominic",
       type: "Chair",
       price: 305,
@@ -139,6 +149,7 @@ const PRODUCTS = [
       comfort_level: "Solid",
     },
     {
+      id: 11,
       name: "Chet",
       type: "Table",
       price: 370,
@@ -152,6 +163,7 @@ const PRODUCTS = [
       comfort_level: "Firm",
     },
     {
+      id: 12,
       name: "Haleigh",
       type: "Chair",
       price: 580,
@@ -166,6 +178,7 @@ const PRODUCTS = [
       comfort_level: "Soft",
     },
     {
+      id: 13,
       name: "Isobel",
       type: "Sofa",
       price: 340,
@@ -180,6 +193,7 @@ const PRODUCTS = [
       comfort_level: "Solid",
     },
     {
+      id: 14,
       name: "Norwood",
       type: "Table",
       price: 315,
@@ -194,6 +208,7 @@ const PRODUCTS = [
       comfort_level: "Medium",
     },
     {
+      id: 15,
       name: "Melvina",
       type: "Sofa",
       price: 905,
@@ -208,6 +223,7 @@ const PRODUCTS = [
       comfort_level: "Medium",
     },
     {
+      id: 16,
       name: "Lottie",
       type: "Sofa",
       price: 245,
@@ -222,6 +238,7 @@ const PRODUCTS = [
       comfort_level: "Firm",
     },
     {
+      id: 17,
       name: "Unique",
       type: "Bed",
       price: 120,
@@ -236,6 +253,7 @@ const PRODUCTS = [
       comfort_level: "Solid",
     },
     {
+      id: 18,
       name: "Arielle",
       type: "Chair",
       price: 445,
@@ -249,6 +267,7 @@ const PRODUCTS = [
       comfort_level: "Soft",
     },
     {
+      id: 19,
       name: "Marlin",
       type: "Sofa",
       price: 415,
@@ -263,6 +282,7 @@ const PRODUCTS = [
       comfort_level: "Medium",
     },
     {
+      id: 20,
       name: "Cleveland",
       type: "Sofa",
       price: 460,
