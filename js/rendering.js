@@ -1,10 +1,12 @@
 const items = document.querySelector(".items");
 const colorContainer = document.querySelector(".colorContainer");
 const categoryContainer = document.querySelector(".categoryContainer");
+const cartqty = document.querySelector('.cartqty')
 
 const renderProduct = (product) => {
-  const li = `
-    <li class="item">
+  const li = document.createElement('li')
+  li.className = 'item';
+  const item = `
         <img src="./img/bedroom1.jpg" alt="" >
         <div class="item_details">
             <header>
@@ -15,10 +17,16 @@ const renderProduct = (product) => {
                 </div>
             </header>
             <div class="cart"><i class="fas fa-shopping-cart"></i></div>
-        </div>
-    </li>`;
+        </div>`;
 
-  items.innerHTML += li;
+  li.innerHTML = item;
+
+  li.addEventListener("click", () => {
+      selectProduct(product)
+  })
+
+  items.append(li);
+
 };
 
 const renderProducts = (productsToRender) => {
@@ -72,3 +80,9 @@ const renderCategories = (products) => {
       categoryContainer.innerHTML += type_item;
     });
   };
+  
+//============== update the Cart quantity =============
+  const renderNewCartSize = () => {
+    console.log(cart)
+    cartqty.innerText = cart.length
+}

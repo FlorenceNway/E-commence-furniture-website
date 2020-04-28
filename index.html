@@ -10,25 +10,26 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     
-    <title>SOFAS</title>
+    <title>E-Commerce Project</title>
 </head>
 <body>
 <div class="container">
 
 <div class="grid-container" id="pageWrapper">
+    <!-- Menu -->
     <section class="grid-item1">
         <header class="menuItems">
             <ul class="left-menu" >
                   <li class='tablinks'><i class="fa fa-bars"></i></li>
                   <li class="tablinks active" onclick="openTab(event, 'Home')">HOME</li>
                   <li class="tablinks" onclick="openTab(event, 'Shop')">SHOP</li>
-                  <li class="tablinks" onclick="openTab(event, 'Magazine')">MAGAZINE</li>
+                  <li class="tablinks" onclick="openTab(event, 'Magazine')" id='magz'>MAGAZINE</li>
             </ul>
             <ul class="mobile-left-menu" >
                 <li class='tablinks'><i class="fa fa-bars"></i></li>
                 <li class="tablinks active" onclick="openTab(event, 'Home')">HOME</li>
                 <li class="tablinks" onclick="openTab(event, 'Shop')">SHOP</li>
-                <li class="tablinks" onclick="openTab(event, 'Magazine')">MAGAZINE</li>
+                <li class="tablinks" onclick="openTab(event, 'Magazine')" id='magz'>MAGAZINE</li>
            </ul>
             <ul class="right-menu">
                 <li><i class="fas fa-shopping-cart" id="cart"></i><span class='cartqty'>0</span><li>
@@ -40,7 +41,7 @@
             </ul>  
         </header>
     </section>
-
+    <!-- Search -->
     <section class="grid-item2">
         <div class='searchBar'>
             <img src='./img/search.png'>
@@ -55,33 +56,33 @@
         </div>    
        
     </section>
-
+    <!-- Content -->
     <section class="grid-item3">
         <!-- Tab content -->
         <div id="Home" class="tabcontent">
-            <div class="carousel_wrapper content">
+            <section class="carousel_wrapper content">
                 <i id="prev" class="fa fa-angle-left left-arrow" aria-hidden="true"></i>
                 <i id="next" class="fa fa-angle-right right-arrow" aria-hidden="true"></i>
                 <ul class="carousel">
                     <li><img src="./img/bedroom1.jpg" alt=""></li>
                     <li><img src="./img/bedroom2.jpg" alt=""></li>
                 </ul>
-            </div>  
+            </section>  
         </div>
         
-        <div id="Shop" class="tabcontent">
-        
+        <div id="Shop" class="tabcontent">      
             <section class="filter-img-div">
-
                 <aside class="filters">
-                         <div class="filter">FILTER BY</div>
+                        <div class="filter">FILTER BY</div>
 
                         <p class="accordion">Colour  <i class="fas fa-angle-down"></i></p>
                         <div class="panel colorContainer"> 
+                            <!-- dyanmic content -->
                         </div>
 
                         <p class="accordion">Category  <i class="fas fa-angle-down"></i></p>
                         <div class="panel categoryContainer">  
+                            <!-- dyanmic content -->
                         </div>
 
                         <h4>Price Range</h4>
@@ -92,15 +93,13 @@
                                     <input type="range" id="slider51to1000" step="5" min="501" max="1000" value=1000>
                                 </div>
                                 <p class='minmaxslider'><span id='from'>£0</span><span id='to'>£1000</span></p>
-                
-                           </div>
-                            
+                            </div>
                         </div>
-        
                 </aside>
+
                 <div class="show-products">
                     <ul class="items">
-                        
+                        <!-- dynamic content-->
                     </ul> 
                     <ul class="pagination">
                         <li>1</li>
@@ -121,43 +120,43 @@
                     </div>
                     <div class="thumbnail">
                         <img src="./img/bedroom1.jpg" alt="bed">
+                        <img src="./img/bedroom2.jpg" alt="bed">
+                        <img src="./img/furniture1.jpg" alt="furniture1">
+                        <img src="./img/furniture2.jpg" alt="furniture2">
                     </div>
+                    <i id="fwd" class="fa fa-angle-left" aria-hidden="true"></i>
+                    <i id="bwd" class="fa fa-angle-right" aria-hidden="true"></i>
                 </div>    
                  
                 <div class="info">
-                <h3>Branagh</h3>
-        
-                <p>branagh left hand facing chaise end
-                    corner sofa, electric blue velvet</p>
-        
-                <h4>$90</h4>
-        
-                <div class="dispatch">
-                    <p>DISPATCHED IN 2-3 WEEKS
-                    ONLY <p class="red">4 left</p>
-                    </p>
-                </div>
-        
-                <div class="colours">
-                    <div><button class="grey"></button></div>
-                    <div><button class="black"></button></div>
-                    <div><button class="gold"></button></div>
-                    <div><button class="blue"></button></div>
-                </div>
-        
-                <button class="add">ADD TO BASKET</button>
-        
-                <div class="deats">
-                    <p>DETAILS</p><i class="fa fa-angle-down"></i>
-                    <div class="deat">
-                    <div>- Dimensions: <span class="dimensions">W: 267 cm D: 102-421 cm H: 82 cm</span></div>
-                    <div>- Seat dimensions: <span class="seatdi">W: 217 cm D: 83 cm H: 43 cm</span></div>
-                    <div>- Weight: <span class="weight">145kg</span></div>
-                    <div>- Materials: <span class="mats">pine and engineered wood frame, beech, plinth</span></div>
-                    <div>- Filling: <span class="filling">feather and fibre mix in black, coil springs and feathers in seat</span></div>
-                    <div>- Comfort: <span class="comfort">soft</span></div>
+                    <h3 class='product-name'></h3>
+            
+                    <p class='description'></p>
+            
+                    <h4 class='price'></h4>
+            
+                    <p class="dispatch">DISPATCHED IN 2-3 WEEKS ONLY <span class="red">4 left</span></p>
+                    
+                    <div class="colours">
+                        <div><button class="grey"></button></div>
+                        <div><button class="black"></button></div>
+                        <div><button class="gold"></button></div>
+                        <div><button class="blue"></button></div>
                     </div>
-                </div>
+            
+                    <button class="add add-to-cart">ADD TO BASKET</button>
+            
+                    <div class="deatils">
+                        <p>DETAILS</p><i class="fa fa-angle-down"></i>
+                        <div class="deatil">
+                        <div>- Dimensions: <span class="dimensions">W: 267 cm D: 102-421 cm H: 82 cm</span></div>
+                        <div>- Seat dimensions: <span class="seatdi">W: 217 cm D: 83 cm H: 43 cm</span></div>
+                        <div>- Weight: <span class="weight">145kg</span></div>
+                        <div>- Materials: <span class="mats">pine and engineered wood frame, beech, plinth</span></div>
+                        <div>- Filling: <span class="filling">feather and fibre mix in black, coil springs and feathers in seat</span></div>
+                        <div>- Comfort: <span class="comfort">soft</span></div>
+                        </div>
+                    </div>
                 </div>
             </section>
                   
@@ -190,6 +189,8 @@
 </div>
     <script src="products.js"></script>
     <script src="./js/rendering.js"></script>
+    <script src="./js/magazinepage.js"></script>
+
     <script src="./js/index.js"></script>
     <script src="./js/filter.js"></script>
    

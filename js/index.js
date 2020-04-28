@@ -5,11 +5,10 @@ const start = () => {
 }
 start()
 
-const openTab = (evt, tabName) => {
-  // Declare all variables
-  var i, tabcontent, tablinks;
+const openTab = (e, tabName) => {
+ 
+  let i, tabcontent, tablinks;
 
-  // Get all elements with class="tabcontent" and hide them
   tabcontent = document.querySelectorAll(".tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
@@ -21,9 +20,8 @@ const openTab = (evt, tabName) => {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
 
-  // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
+  e.currentTarget.className += " active";
 }
 
 const closeNav = () => {
@@ -117,6 +115,29 @@ sliderLeft.addEventListener("change",fromSliderLeft);
 sliderRight.addEventListener("change",toSliderRight);
 
 
+const cart = localStorage.getItem("cart") != null ? JSON.parse(localStorage.getItem("cart")) : [];
+const cart = []
+
+const addToCart = (product) => {
+    if (cart.map(p => p.id).includes(product.id)) {
+        console.log("REMOVE FROM CART", product)
+        cart.splice(cart.indexOf(product), 1)
+    } else {
+        console.log("ADD TO CART", product)
+        cart.push(product)
+    }
+
+    if (cart.map(p => p.id).includes(product.id)) {
+        addToCartButton.innerText = "Remove from cart"
+    } else {
+        addToCartButton.innerText = "Add to cart"
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart))
+    renderNewCartSize()
+}
+
+renderNewCartSize()
 renderProducts(PRODUCTS)
 renderColors(PRODUCTS)
 renderCategories(PRODUCTS)
