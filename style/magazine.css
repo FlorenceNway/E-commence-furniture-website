@@ -1,0 +1,191 @@
+.magazine-wrapper {
+    display: flex;
+}
+.product-img {
+    width: 70%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.main-img {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    padding: 0px 15px 15px 15px;
+}
+.main-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.thumbnail {
+    width: 12%;
+    height: 12%;
+}
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+
+/*if under screen size: */
+@media screen and (max-width: 600px) {
+    .magazine-wrapper {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .main-img {
+        width: 80%;
+       
+    }
+    .info{
+        width: 100%;
+        
+    }
+}
+
+/* ================= */
+
+  .prev, .next {
+    cursor: pointer;
+    color: black;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: white;
+    padding-top: 2%;
+    width:4%;
+    height: 100%;
+    font-size: 30px;
+    }
+  
+  .prev:hover, .next:hover {
+    color: grey;
+  }
+  
+  .prev{
+    float: left;
+  }
+  .next{
+    float: right;
+  }
+  
+  
+  .info{
+    width: 30%;
+  }
+  
+  .info> *{
+    text-align: left;
+    margin-top: -1.5%;
+    margin-left: 3%;
+    width: 95%;
+    padding: 2%;
+  }
+  
+  .info>p{
+    font-size: 12px;
+    margin-top: -5%;
+  }
+  
+  .dispatch{
+    display: block;
+    font-size: 12px;
+    margin-top: -5%;
+  }
+  .dispatch >p{
+    display: inline;
+  }
+  .red{
+    color: red;
+  }
+  .colours, .add{
+    display: block;
+    height: 15%;
+    margin-left: 3%;
+    text-align: center;
+  }
+  
+  .colours > div{
+    float: left;
+    margin-top: 3%;
+    margin-right: 4%;
+    width: 30px;
+    height: 30px;
+  }
+  .grey{
+    background-color: grey;
+    border-radius: 50%;
+    height:100%;
+    width: 100%;
+    border: black solid 1px;
+  }
+  .black{
+    background-color: black;
+    border-radius: 50%;
+    height:100%;
+    width: 100%;
+  }
+  .gold{
+    background-color: darkgoldenrod;
+    border-radius: 50%;
+    height:100%;
+    width: 100%;
+  }
+  .blue{
+    background-color: blue;
+    border-radius: 50%;
+    height:100%;
+    width: 100%;
+  }
+  
+  .add{
+    background-color: black;
+    color: white;
+    height: 9%;
+    width: 95%;
+  }
+  
+  .deats{
+    border: black solid 1px;
+    margin-top: 5px;
+    height: 9%;
+    width: 95%;
+  }
+  
+  .deats >p{
+    float: left;
+    width: 60%;
+    height: 100%;
+    padding-top: 2%;
+    text-align: right;
+    margin-top: 0;
+    font-size: 15px;
+  }
+  
+  .deats > i{
+    float: right;
+    font-size: 30px;
+    size: 20%;
+    height: 60%;
+    width: 20%;
+    text-align: center;
+  }
+  
+  .deat{
+    display: none;
+    margin-top: 50px;
+    width: 100%;
+    height: 900px;
+  }
+  .deat>*{
+    width: 100%;
+    text-align: left;
+    font-size: 10px;
+    padding: 1%;
+  }
+  
+  
+ 
+  
