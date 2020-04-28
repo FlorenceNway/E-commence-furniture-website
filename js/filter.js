@@ -5,20 +5,19 @@ const slideContainer = document.querySelector("#sliderBox")
 const createFilterObject = () => {
     let from = parseInt(sliderLeft.value)
     let to = parseInt(sliderRight.value)
-    console.log(from ,to)
 
     const selectedColors = []
 
     colorContainer.querySelectorAll("input:checked").forEach(colorCheckbox => {
         selectedColors.push(colorCheckbox.value)
     })
-    console.log(selectedColors)
+
     const selectedCategories = []
 
     categoryContainer.querySelectorAll("input:checked").forEach(categoryCheckbox => {
         selectedCategories.push(categoryCheckbox.value)
     })
-    console.log(selectedCategories)
+
     return {
         from: from,
         to: to,
@@ -31,7 +30,6 @@ const applyFilters = (priceFrom, priceTo, selectedColors, selectedCategories) =>
     console.log("APPLY FILTERS", priceFrom, priceTo, selectedColors, selectedCategories)
 
     const filteredProducts = PRODUCTS.filter(product => {
-        //return true or false
         if (product.price >= priceFrom && product.price <= priceTo) {
             return true
         } else {
