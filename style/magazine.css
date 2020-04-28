@@ -19,15 +19,29 @@
     height: 100%;
 }
 
-.thumbnail {
-  width: 15%;
-  height: 15%;
+.thumbnails {
   display: flex;
+  justify-content: center;
+  position: relative;
+  
+}
+.thumbnail {
+  width: 18%;
+  height: 75%;
 }
 .thumbnail img {
     width: 100%;
     height: 100%;
     padding: 5px;
+}
+#fwd, #bwd {
+  position: absolute;
+  top: 25%;
+  font-size: 20px;
+  color: #9fa0a5;
+}
+#fwd {
+  left: 92px;
 }
 
 /*if under screen size: */
@@ -48,31 +62,10 @@
 }
 
 /* ================= */
-
-  .prev, .next {
-    cursor: pointer;
-    color: black;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    background-color: white;
-    padding-top: 2%;
-    width:4%;
-    height: 100%;
-    font-size: 30px;
-    }
   
   .prev:hover, .next:hover {
     color: grey;
   }
-  
-  .prev{
-    float: left;
-  }
-  .next{
-    float: right;
-  }
-  
   
   .info{
     width: 30%;
@@ -142,48 +135,17 @@
   .add-to-cart:hover{
     background-color: #00C98C;
   }
-  .add-to-cart:active{
-    background-color: #00C98C;
-  }
   
   .deatils{
     border: black solid 1px;
     margin-top: 5px;
     height: 9%;
     width: 95%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
   
-  .deatils >p{
-    float: left;
-    width: 60%;
-    height: 100%;
-    padding-top: 2%;
-    text-align: right;
-    margin-top: 0;
-    font-size: 15px;
-  }
-  
-  .deatils > i{
-    float: right;
-    font-size: 30px;
-    size: 20%;
-    height: 60%;
-    width: 20%;
-    text-align: center;
-  }
-  
-  .deatil{
-    display: none;
-    margin-top: 50px;
-    width: 100%;
-    height: 900px;
-  }
-  .deatil>*{
-    width: 100%;
-    text-align: left;
-    font-size: 10px;
-    padding: 1%;
-  }
   
   
  
