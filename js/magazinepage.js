@@ -1,6 +1,9 @@
-// const carousel = productDetailsContainer.querySelector(".carousel")
-// const carouselLeftButton = carousel.querySelector("button:nth-of-type(1)")
-// const carouselRightButton = carousel.querySelector("button:nth-of-type(2)")
+
+const fwd = document.querySelector('#fwd')
+const bwd = document.querySelector('#bwd')
+const productImage = document.querySelector('.main-img img')
+
+
 const productName = document.querySelector('.product-name')
 const productPrice = document.querySelector('.price')
 const description = document.querySelector('.description')
@@ -20,39 +23,65 @@ const renderProductDetails = product => {
     productPrice.innerText = `£${product.price}`
     description.innerText = product.description
 
-    let imageIndex = 0
-    const images = ['./img/bedroom1.jpg','./img/bedroom2.jpg','./img/furniture1.jpg','./img/furniture2.jpg']
-
-    //productImage.src = images[imageIndex]
-
-    // if (cart.map(p => p.id).includes(product.id)) {
-    //     addToCartButton.innerText = "Remove from cart"
-    // } else {
-    //     addToCartButton.innerText = "Add to cart"
-    // }
-
+    if (cart.map(p => p.id).includes(product.id)) {
+        addToCartButton.innerText = "REMOVE FROM CART"
+        addToCartButton.style.background = '#00C98C'
+    } else {
+        addToCartButton.innerText = "ADD TO BASKET"
+        addToCartButton.style.background = '#000'
+    }
 
     addToCartButton.onclick = () => {
         addToCart(product)
     }
 
-    // carouselRightButton.onclick = () => {
-    //     imageIndex++
-    //     if (imageIndex > product.images.length - 1) {
-    //         imageIndex = 0
-    //     }
-    //     console.log("NEXT IMAGE", imageIndex)
-    //     productImage.src = product.images[imageIndex]
-    // }
+    let imageIndex = 0
+    const images = ['./img/furniture1.jpg','./img/bedroom2.jpg','./img/furniture1.jpg','./img/furniture2.jpg']
 
-    // carouselLeftButton.onclick = () => {
-    //     imageIndex--
-    //     if (imageIndex < 0) {
-    //         imageIndex = product.images.length - 1
-    //     }
-    //     console.log("PREV IMAGE", imageIndex)
-    //     productImage.src = product.images[imageIndex]
-    // }
+    productImage.src = images[imageIndex]
+    console.log(images[imageIndex])
+
+    fwd.addEventListener('click', () => {
+        imageIndex++
+        if (imageIndex > images.length - 1) {
+            imageIndex = 0
+        }
+        console.log("NEXT IMAGE", imageIndex)
+        productImage.src = images[imageIndex]
+    })
+
+    bwd.addEventListener('click', () => {
+        imageIndex--
+        if (imageIndex < 0) {
+            imageIndex = images.length - 1
+        }
+        console.log("PREV IMAGE", imageIndex)
+        productImage.src = images[imageIndex]
+    })
 
 }
+
+const cart = localStorage.getItem("cart") != null ? JSON.parse(localStorage.getItem("cart")) : [];
+
+const addToCart = (product) => {
+    if (cart.map(p => p.id).includes(product.id)) {
+        console.log("REMOVE FROM CART", product)
+        cart.splice(cart.indexOf(product), 1)
+    } else {
+        console.log("ADD TO CART", product)
+        cart.push(product)
+    }
+
+    if (cart.map(p => p.id).includes(product.id)) {
+        addToCartButton.innerText = "REMOVE FROM CART"
+        addToCartButton.style.background = '#00C98C'
+    } else {
+        addToCartButton.innerText = "ADD TO BASKET"
+        addToCartButton.style.background = '#000'
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart))
+    renderNewCartSize()
+}
+
 renderProductDetails(PRODUCTS[0])
