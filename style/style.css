@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "aventir";
-  src: url(./AvenirLTStd-Medium.otf);
+  src: url(../font/AvenirLTStd-Medium.otf);
 }
 *{
   box-sizing: border-box;
@@ -73,10 +73,6 @@
       display: none;
   }
 
-  /* .left-menu .tablinks{
-      visibility: 'visible'; 
-      display: inline;
-  } */
   .left-menu .tablinks{
     display: inline;
   }
@@ -208,13 +204,8 @@
   /* width: 75%;  */
 }
 /* .items {
-  display: grid;
-  grid-gap: 10px;
-  max-width: 940px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: 300px;
-  list-style: none;
-  padding: 0;
 } */
 .items {
   display: grid;
@@ -229,6 +220,10 @@
   position: relative;
   display: flex;
   align-items: flex-end;
+  cursor: pointer
+}
+.item:hover {
+  transform: scale(1.1);
 }
 .item img {
   position: absolute;
