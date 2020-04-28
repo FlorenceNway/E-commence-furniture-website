@@ -29,6 +29,8 @@ const openTab = (evt, tabName) => {
 const closeNav = () => {
     const container = document.querySelector(".container");
     container.classList.remove('overlay')
+    const cartqty = document.querySelector(".right-menu .cartqty");
+        cartqty.style.color = 'blue'
     const closebtn = document.querySelector(".right-menu a");
     closebtn.classList.remove('closebtn')
     closebtn.innerText = ''
@@ -46,6 +48,8 @@ const closeNav = () => {
 const clickMenuBarsIcon = () => {
     const wholePage = document.querySelector(".container");
       wholePage.classList.add("overlay");
+    const cartqty = document.querySelector(".right-menu .cartqty");
+      cartqty.style.color = 'black'
     const closebtn = document.querySelector(".right-menu a");
         closebtn.innerText = 'X'
         closebtn.className = "closebtn"
