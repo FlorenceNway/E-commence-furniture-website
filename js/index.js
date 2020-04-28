@@ -115,27 +115,6 @@ sliderLeft.addEventListener("change",fromSliderLeft);
 sliderRight.addEventListener("change",toSliderRight);
 
 
-const cart = localStorage.getItem("cart") != null ? JSON.parse(localStorage.getItem("cart")) : [];
-const cart = []
-
-const addToCart = (product) => {
-    if (cart.map(p => p.id).includes(product.id)) {
-        console.log("REMOVE FROM CART", product)
-        cart.splice(cart.indexOf(product), 1)
-    } else {
-        console.log("ADD TO CART", product)
-        cart.push(product)
-    }
-
-    if (cart.map(p => p.id).includes(product.id)) {
-        addToCartButton.innerText = "Remove from cart"
-    } else {
-        addToCartButton.innerText = "Add to cart"
-    }
-
-    localStorage.setItem("cart", JSON.stringify(cart))
-    renderNewCartSize()
-}
 
 renderNewCartSize()
 renderProducts(PRODUCTS)
