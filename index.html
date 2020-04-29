@@ -21,7 +21,7 @@
     <section class="grid-item1">
         <header class="menuItems">
             <ul class="left-menu" >
-                  <li class='tablinks'><i class="fa fa-bars"></i></li>
+                  <li class='tablinks'><i class="fa fa-bars" onclick="leftMenuBarsIcon()"></i></li>
                   <li class="tablinks active" onclick="openTab(event, 'Home')">HOME</li>
                   <li class="tablinks" onclick="openTab(event, 'Shop')">SHOP</li>
                   <li class="tablinks" onclick="openTab(event, 'Magazine')" id='magz'>MAGAZINE</li>
@@ -34,7 +34,7 @@
            </ul>
             <ul class="right-menu">
                 <li><i class="fas fa-shopping-cart" id="cart"></i><span class='cartqty'>0</span><li>
-                <li class="icon" onclick="clickMenuBarsIcon()">
+                <li class="icon" onclick="rightMenuBarsIcon()">
                     <i class="fa fa-bars"></i>
                 </li>
                 <a href="javascript:void(0)" onclick="closeNav()"></a>
