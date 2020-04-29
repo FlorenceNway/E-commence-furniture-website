@@ -84,4 +84,18 @@ const addToCart = (product) => {
     renderNewCartSize()
 }
 
+
+const images = ['./img/bedroom3.jpg','./img/bedroom2.jpg','./img/furniture1.jpg','./img/furniture2.jpg']
+currentSlide(0);
+
+function currentSlide(n) {
+    if(n == 0) {
+        productImage.src = images[n]
+    }else {
+        productImage.src = images[n-1] 
+    }
+}   
+
+
 renderProductDetails(PRODUCTS[0])
+
