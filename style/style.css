@@ -151,7 +151,7 @@ li.closebtn {
   position: absolute;
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 .footer-social-media {
   margin-left: 30px;
@@ -179,6 +179,9 @@ ul.carousel {
 .carousel li {
   width: 100%;
   flex-shrink: 0;
+}
+.carousel img:hover {
+  background: rgba(0, 0, 0, 0.2);
 }
 .carousel li img {
   width: 100%;
@@ -343,11 +346,11 @@ i.right-arrow {
 
 
 /* =====pagination===== */
-/* .pagination {
+.pagination {
   position: absolute;
-  bottom: 65px;
-} */
-/* .pagination button {
+  /* bottom: -20px; */
+} 
+.pagination button {
   border: none;
   background: none; 
   cursor: pointer;
@@ -357,7 +360,7 @@ i.right-arrow {
 }
 .pagination button:active, .pagination button:hover {
   background-color: #00C98D;;
-} */
+}
 
 /* =============================================================== */
 /* #pageWrapper {
@@ -369,18 +372,20 @@ i.right-arrow {
   display: inline;
 }*/
 
-.grid-item1, .grid-item2, .grid-item4 {
+.grid-item1, .grid-item2 {
   margin: 0 20px;
   height: 60px;
 }
 
 .grid-item4 {
   position: relative;
+  height: 70px;
+  margin-top: 25px;
 }
 
 .footer {
   position: absolute;
-  bottom: 0;
+  /* bottom: 0; */
 } 
 
 /* ---Mobile------ */
