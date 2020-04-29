@@ -90,20 +90,27 @@
 
 @media screen and (max-width: 600px) {
   .filters{
+    width: 100%;
     display: none;
+    margin-left: 5%;
+    color: white;
+    
   }
-  
+
   .items {
     justify-content: center;
   } 
 
-  /* #pageWrapper .grid-item3 {
-    display: inline;
-  }
-/* 
-
-
-  /*.show-products {
+  .show-products {
     width: 100%;
-  } */
+  }
+
+  .filter-img-div {
+    display: flex;
+    flex-direction: column;
+ }
+
+  .mobile-shopo-menu {
+    color: white;
+  }
 }
