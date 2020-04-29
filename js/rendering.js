@@ -2,6 +2,7 @@ const items = document.querySelector(".items");
 const colorContainer = document.querySelector(".colorContainer");
 const categoryContainer = document.querySelector(".categoryContainer");
 const cartqty = document.querySelector('.cartqty')
+const pagination_div = document.querySelector('.pagination');
 
 const renderProduct = (product) => {
   const li = document.createElement('li')
@@ -30,12 +31,67 @@ const renderProduct = (product) => {
 };
 
 const renderProducts = (productsToRender) => {
-  items.innerHTML = "";
 
-  productsToRender.forEach((product) => {
-    renderProduct(product);
-  });
+  SetupPagination (productsToRender, pagination_div, products_per_page)
+
+  const page1_btn = document.querySelector('.pagination button:first-child')
+  page1_btn.click();
+  page1_btn.classname = 'active'
+
 };
+
+//========== Pagination ==============================
+
+let current_page = 1;
+let products_per_page = 4;
+let page = 1;
+
+const SetupPagination = (productsToRender, pagination_div, products_per_page) => {
+
+	pagination_div.innerHTML = "";
+
+  let page_count = Math.ceil(productsToRender.length / products_per_page); //5
+
+
+	for (i = 1; i < page_count; i++) {
+    let btn = PaginationButton(i, productsToRender);
+
+		pagination_div.appendChild(btn);
+	}
+}
+
+
+const PaginationButton = (page, productsToRender) => { // page 1
+  
+  let start = products_per_page * (page - 1); 
+	let end = start + products_per_page; 
+  let paginatedItems = productsToRender.slice(start, end); 
+
+	let button = document.createElement('button');
+  button.innerText = page;
+  
+	if (current_page == page) {
+    button.classList.add('active');
+  }
+
+	button.addEventListener('click', function () {
+    current_page = page;
+    items.innerHTML = "";
+
+    paginatedItems.forEach(product => {
+      renderProduct(product);
+    })
+
+		let current_btn = document.querySelector('.pagination button.active');
+		current_btn.classList.remove('active');
+
+		button.classList.add('active');
+  });
+  
+	return button;
+}
+
+
 
 // ========== Color list ================
 const renderColors = (products) => {
@@ -83,6 +139,7 @@ const renderCategories = (products) => {
   
 //============== update the Cart quantity =============
   const renderNewCartSize = () => {
-    console.log(cart)
+    console.log('cart',cart)
     cartqty.innerText = cart.length
 }
+
