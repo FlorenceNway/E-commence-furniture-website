@@ -51,11 +51,11 @@ a {
 }
 
 /* -----Home Page ------------------------------------- */
-.grid-container {
+/* .grid-container {
   display: grid;
   grid-template-rows: 1fr 1fr auto 1fr;
   padding: 10px;
-}
+} */
 
 /* ---Header--- */
 #sort-options {
