@@ -88,6 +88,23 @@ li.closebtn {
   display: none;
 }
 
+.text {
+  position: absolute;
+  color: #f1f7f8;
+  top: 45%;
+  z-index: 11;
+  font-weight: 900;
+  left: 8%;
+}
+.text p:first-child {
+  font-size: 45px;
+}
+.text p:last-child {
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+
 /* --Search Section----- */
 .grid-item2 {
   display: flex;
@@ -457,6 +474,18 @@ i.right-arrow {
   }
   .footer-items li {
     text-align: left;
+  }
+
+  .text {
+    top: 25%;
+    left: 5%;
+  }
+  .text p:first-child {
+    font-size: 18px;
+  }
+  .text p:last-child {
+    font-size: 15px;
+    text-decoration: underline;
   }
 
 }
