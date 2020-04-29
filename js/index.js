@@ -1,18 +1,19 @@
 const container = document.querySelector(".container");
 const closebtn = document.querySelector(".right-menu a");
+const sortOptionsContainer = document.querySelector(".sort-options")
 
 const mobile_leftmenu = document.querySelector('.mobile-left-menu')
 const mobile_leftmenu1 = document.querySelector('.mobile-left-menu li:nth-child(1)')
 const mobile_leftmenu2 = document.querySelector('.mobile-left-menu li:nth-child(2)')
 const mobile_leftmenu3 = document.querySelector('.mobile-left-menu li:nth-child(3)')
 const mobile_leftmenu4 = document.querySelector('.mobile-left-menu li:nth-child(4)')
-// const tablinks = document.querySelector('.mobile-left-menu .tablinks')
-// const leftmenubar = document.querySelector('.filters .leftMenuBars')
+
 const row2 = document.querySelector(".grid-item2");
 const row3 = document.querySelector(".grid-item3");
 const row4 = document.querySelector(".grid-item4");
 
 const Shoppage = document.querySelector('#Shop')
+const Homepage = document.querySelector('#Home')
 const filter = document.querySelector('.filters')
 const showProducts = document.querySelector('.show-products')
 
@@ -37,6 +38,10 @@ const openTab = (e, tabName) => {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
+
+  // if(tabName == 'Shop') {
+  //   sortOptionsContainer.style.display = 'flex'
+  // } 
 
   document.getElementById(tabName).style.display = "block";
   e.currentTarget.className += " active";
@@ -96,7 +101,9 @@ const renderUponClick = () => {
     row3.style.display = 'inline'
     showProducts.style.display = 'none'
     filter.style.display = 'block'
-    
+    sortOptionsContainer.style.display = 'block'
+  } else if(Homepage.style.display == 'block') {
+    sortOptionsContainer.style.display = 'none'
   }
 }
 

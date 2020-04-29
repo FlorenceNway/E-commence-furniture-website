@@ -58,7 +58,7 @@ a {
 }
 
 /* ---Header--- */
-#sort-options {
+.sort-options {
   display: block;
 }
 
@@ -453,7 +453,7 @@ i.right-arrow {
   }
 
   /* ----Home---- */
-  #sort-options {
+  .sort-options {
     display: none;
   }
 

@@ -1,6 +1,6 @@
 /* ----SHOP page ------- */
   #Shop {
-    margin-top: 1.5em;
+    margin-top: 1.2em;
   }
 
   .panel {
@@ -65,9 +65,14 @@
     padding: 0 1em; 
   }
   
+  /* .mobile-select {
+    display: none;
+  } */
+
   .filter-img-div {
     display: flex;
     grid-template-columns: 1fr auto; 
+    margin: 20px;
   }
   
   .filters {
@@ -94,7 +99,6 @@
     display: none;
     margin-left: 5%;
     color: white;
-    
   }
 
   .items {
@@ -113,4 +117,29 @@
   .mobile-shopo-menu {
     color: white;
   }
+
+  /* .leftMenuBars {
+    display: none;
+  }
+
+  .panel {
+    background: black;
+  }
+
+  .grid-item2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* .mobile-left-menu #shop.active #sort-options {
+    display: block;
+  }  */
+  .sort-options {
+    display: block;
+  }
+
+  /* .mobile-select {
+    display: block;
+  } */ 
+
 }
