@@ -32,6 +32,14 @@ const renderProduct = (product) => {
 
 const renderProducts = (productsToRender) => {
 
+  let products_per_page;
+
+  if(screen.width > 600) {
+    products_per_page = 6;
+  } else if(screen.width < 599){
+    products_per_page = 4;
+  }
+
   SetupPagination (productsToRender, pagination_div, products_per_page)
 
   const page1_btn = document.querySelector('.pagination button:first-child')
@@ -43,29 +51,31 @@ const renderProducts = (productsToRender) => {
 //========== Pagination ==============================
 
 let current_page = 1;
-let products_per_page = 4;
 let page = 1;
 
 const SetupPagination = (productsToRender, pagination_div, products_per_page) => {
+  console.log(products_per_page)
 
 	pagination_div.innerHTML = "";
 
   let page_count = Math.ceil(productsToRender.length / products_per_page); //5
 
 
-	for (i = 1; i < page_count; i++) {
-    let btn = PaginationButton(i, productsToRender);
+	for (i = 1; i < page_count + 1; i++) {
+    let btn = PaginationButton(i, productsToRender, products_per_page);
 
 		pagination_div.appendChild(btn);
 	}
 }
 
 
-const PaginationButton = (page, productsToRender) => { // page 1
+const PaginationButton = (page, productsToRender, products_per_page) => { // page 1
   
   let start = products_per_page * (page - 1); 
 	let end = start + products_per_page; 
   let paginatedItems = productsToRender.slice(start, end); 
+
+  console.log('pagination', paginatedItems)
 
 	let button = document.createElement('button');
   button.innerText = page;
