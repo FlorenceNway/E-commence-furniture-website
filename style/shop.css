@@ -118,13 +118,14 @@
     color: white;
   }
 
+  .panel {
+    background: black;
+  } 
   /* .leftMenuBars {
     display: none;
   }
 
-  .panel {
-    background: black;
-  }
+ 
 
   .grid-item2 {
     display: flex;
