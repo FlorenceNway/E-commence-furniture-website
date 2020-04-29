@@ -73,6 +73,7 @@
   .filters {
     width: 25%;
     max-width: 300px; 
+    display: block;
   }
 
   /* ---Pagination----- */
@@ -85,4 +86,21 @@
   padding: 5px;
   display: inline-block;
   background-color: aqua;
+}
+
+@media screen and (max-width: 600px) {
+  .filters{
+    display: none;
+  }
+
+  /* #pageWrapper .grid-item3 {
+    display: inline;
+  }
+
+  .items {
+    justify-content: center;
+  }
+  .show-products {
+    width: 100%;
+  } */
 }
