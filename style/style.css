@@ -1,6 +1,6 @@
 .container {
   max-width: 1400px;
-  margin: 0 5%;
+  /* margin: 0 5%; */
 }
 
 @font-face {
@@ -58,6 +58,10 @@ a {
 }
 
 /* ---Header--- */
+#sort-options {
+  display: block;
+}
+
 .right-menu li.icon {
   display: none;
 }
@@ -320,6 +324,48 @@ i.right-arrow {
   margin-left: 5px;
 }
 
+
+/* =====pagination===== */
+/* .pagination {
+  position: absolute;
+  bottom: 65px;
+} */
+/* .pagination button {
+  border: none;
+  background: none; 
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 0 10px;
+ 
+}
+.pagination button:active, .pagination button:hover {
+  background-color: #00C98D;;
+} */
+
+/* =============================================================== */
+/* #pageWrapper {
+  display: flex;
+  flex-direction: column;
+} */
+
+/* .grid-item3 {
+  display: inline;
+}
+
+.grid-item1, .grid-item2, .grid-item4 {
+  margin: 0 20px;
+  height: 60px;
+}
+
+.grid-item4 {
+  position: relative;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+} */
+
 /* ---Mobile------ */
 
 @media screen and (max-width: 600px) {
@@ -384,6 +430,11 @@ i.right-arrow {
     display: none;
   }
 
+  /* ----Home---- */
+  #sort-options {
+    display: none;
+  }
+
   /* ---Footer---- */
   .footer {
     position: absolute;
@@ -407,16 +458,3 @@ i.right-arrow {
     text-align: left;
   }
 }
-
-/* =====pagination===== */
-.pagination button {
-  border: none;
-  background: none; 
-  cursor: pointer;
-  padding: 5px 10px;
-  margin: 0 10px;
-}
-.pagination button:active, .pagination button:hover {
-  background-color: #00C98D;;
-}
-
