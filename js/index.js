@@ -1,8 +1,13 @@
 const container = document.querySelector(".container");
 const closebtn = document.querySelector(".right-menu a");
-//const cartqty = document.querySelector(".right-menu .cartqty");
 
 const mobile_leftmenu = document.querySelector('.mobile-left-menu')
+const mobile_leftmenu1 = document.querySelector('.mobile-left-menu li:nth-child(1)')
+const mobile_leftmenu2 = document.querySelector('.mobile-left-menu li:nth-child(2)')
+const mobile_leftmenu3 = document.querySelector('.mobile-left-menu li:nth-child(3)')
+const mobile_leftmenu4 = document.querySelector('.mobile-left-menu li:nth-child(4)')
+// const tablinks = document.querySelector('.mobile-left-menu .tablinks')
+// const leftmenubar = document.querySelector('.filters .leftMenuBars')
 const row2 = document.querySelector(".grid-item2");
 const row3 = document.querySelector(".grid-item3");
 const row4 = document.querySelector(".grid-item4");
@@ -37,12 +42,13 @@ const openTab = (e, tabName) => {
   e.currentTarget.className += " active";
 }
 
+
 const closeNav = () => {
-    
   container.classList.remove('overlay')
   cartqty.style.color = 'blue'
   closebtn.classList.remove('closebtn')
   closebtn.innerText = ''
+  
   mobile_leftmenu.style.display = 'none'
   row2.style.display = 'flex'
   row3.style.display = 'inline'
@@ -53,13 +59,30 @@ const closeNav = () => {
 
 }  
 
-const rightMenuBarsIcon = () => {
-    
+const leftMenuBarsIcon = () => {
   container.classList.add("overlay");
   cartqty.style.color = 'black'
   closebtn.innerText = 'X'
   closebtn.className = "closebtn"
   mobile_leftmenu.style.display = 'block'
+  mobile_leftmenu2.style.display = 'block'
+  mobile_leftmenu3.style.display = 'block'
+  mobile_leftmenu4.style.display = 'block'
+  row2.style.display = 'none'
+  row3.style.display = 'none'
+  row4.style.display = 'none'
+
+} 
+
+const rightMenuBarsIcon = () => {
+  container.classList.add("overlay");
+  cartqty.style.color = 'black'
+  closebtn.innerText = 'X'
+  closebtn.className = "closebtn"
+  mobile_leftmenu.style.display = 'block'
+  mobile_leftmenu2.style.display = 'none'
+  mobile_leftmenu3.style.display = 'none'
+  mobile_leftmenu4.style.display = 'none'
   row2.style.display = 'none'
   row3.style.display = 'none'
   row4.style.display = 'none'
@@ -69,12 +92,11 @@ const rightMenuBarsIcon = () => {
 
   
 const renderUponClick = () => {
-
-  if(Shoppage.style.display=='block') {
+  if(Shoppage.style.display =='block') {
     row3.style.display = 'inline'
     showProducts.style.display = 'none'
     filter.style.display = 'block'
-    mobile_leftmenu.style.display = 'none'
+    
   }
 }
 
