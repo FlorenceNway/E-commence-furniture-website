@@ -15,14 +15,15 @@
     flex-direction: column;
     flex: 1 1 auto;
     width: 75%;  
+    position: relative;
   }
   
   .items {
     display: grid;
     max-width: 940px;
-    grid-template-columns: repeat(auto-fit, 300px);
-    grid-gap: 20px;
-    grid-auto-rows: 300px;
+    grid-template-columns: repeat(auto-fit, 280px);
+    grid-gap: 25px;
+    grid-auto-rows: 250px;
     list-style: none;
     padding: 0;
   }
@@ -73,3 +74,15 @@
     width: 25%;
     max-width: 300px; 
   }
+
+  /* ---Pagination----- */
+.pagination {
+  position: absolute;
+  bottom: -35px;
+  align-self: center;
+}
+.pagination li{
+  padding: 5px;
+  display: inline-block;
+  background-color: aqua;
+}
