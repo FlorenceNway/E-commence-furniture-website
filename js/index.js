@@ -1,3 +1,17 @@
+const container = document.querySelector(".container");
+const closebtn = document.querySelector(".right-menu a");
+//const cartqty = document.querySelector(".right-menu .cartqty");
+
+const mobile_leftmenu = document.querySelector('.mobile-left-menu')
+const row2 = document.querySelector(".grid-item2");
+const row3 = document.querySelector(".grid-item3");
+const row4 = document.querySelector(".grid-item4");
+
+const Shoppage = document.querySelector('#Shop')
+const filter = document.querySelector('.filters')
+const showProducts = document.querySelector('.show-products')
+
+
 const start = () => {
     const home = document.getElementById('Home')
     home.className += " active";
@@ -6,7 +20,6 @@ const start = () => {
 start()
 
 const openTab = (e, tabName) => {
- 
   let i, tabcontent, tablinks;
 
   tabcontent = document.querySelectorAll(".tabcontent");
@@ -25,42 +38,46 @@ const openTab = (e, tabName) => {
 }
 
 const closeNav = () => {
-    const container = document.querySelector(".container");
-    container.classList.remove('overlay')
-    const cartqty = document.querySelector(".right-menu .cartqty");
-        cartqty.style.color = 'blue'
-    const closebtn = document.querySelector(".right-menu a");
-    closebtn.classList.remove('closebtn')
-    closebtn.innerText = ''
-    const mobile_leftmenu = document.querySelector('.mobile-left-menu')
-    mobile_leftmenu.style.display = 'none'
+    
+  container.classList.remove('overlay')
+  cartqty.style.color = 'blue'
+  closebtn.classList.remove('closebtn')
+  closebtn.innerText = ''
+  mobile_leftmenu.style.display = 'none'
+  row2.style.display = 'flex'
+  row3.style.display = 'inline'
+  row4.style.display = 'flex'
 
-    const row2 = document.querySelector(".grid-item2");
-    const row3 = document.querySelector(".grid-item3");
-    const row4 = document.querySelector(".grid-item4");
-    row2.style.display = 'flex'
-    row3.style.display = 'inline'
-    row4.style.display = 'flex'
+  showProducts.style.display = 'flex'
+  filter.style.display = 'none'
+
 }  
 
-const clickMenuBarsIcon = () => {
-    const wholePage = document.querySelector(".container");
-      wholePage.classList.add("overlay");
-    const cartqty = document.querySelector(".right-menu .cartqty");
-      cartqty.style.color = 'black'
-    const closebtn = document.querySelector(".right-menu a");
-        closebtn.innerText = 'X'
-        closebtn.className = "closebtn"
-    const mobile_leftmenu = document.querySelector('.mobile-left-menu')
-        mobile_leftmenu.style.display = 'block'
+const rightMenuBarsIcon = () => {
+    
+  container.classList.add("overlay");
+  cartqty.style.color = 'black'
+  closebtn.innerText = 'X'
+  closebtn.className = "closebtn"
+  mobile_leftmenu.style.display = 'block'
+  row2.style.display = 'none'
+  row3.style.display = 'none'
+  row4.style.display = 'none'
+
+  renderUponClick()
+} 
+
   
-    const row2 = document.querySelector(".grid-item2");
-    const row3 = document.querySelector(".grid-item3");
-    const row4 = document.querySelector(".grid-item4");
-    row2.style.display = 'none'
-    row3.style.display = 'none'
-    row4.style.display = 'none'
-  } 
+const renderUponClick = () => {
+
+  if(Shoppage.style.display=='block') {
+    row3.style.display = 'inline'
+    showProducts.style.display = 'none'
+    filter.style.display = 'block'
+    mobile_leftmenu.style.display = 'none'
+  }
+}
+
 
 //   Carousel
 const carousel = document.querySelector(".carousel");
