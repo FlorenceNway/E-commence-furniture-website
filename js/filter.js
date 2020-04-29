@@ -1,4 +1,4 @@
-const sortOptionsContainer = document.querySelector("#sort-options")
+
 const sortOptionInputs = sortOptionsContainer.querySelectorAll("input")
 const slideContainer = document.querySelector("#sliderBox")
 
