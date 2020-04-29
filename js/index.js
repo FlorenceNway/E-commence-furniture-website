@@ -39,7 +39,7 @@ const closeNav = () => {
     const row3 = document.querySelector(".grid-item3");
     const row4 = document.querySelector(".grid-item4");
     row2.style.display = 'flex'
-    row3.style.display = 'flex'
+    row3.style.display = 'inline'
     row4.style.display = 'flex'
 }  
 

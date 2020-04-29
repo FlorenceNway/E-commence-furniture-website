@@ -92,15 +92,18 @@
   .filters{
     display: none;
   }
+  
+  .items {
+    justify-content: center;
+  } 
 
   /* #pageWrapper .grid-item3 {
     display: inline;
   }
+/* 
 
-  .items {
-    justify-content: center;
-  }
-  .show-products {
+
+  /*.show-products {
     width: 100%;
   } */
 }

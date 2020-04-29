@@ -350,7 +350,7 @@ i.right-arrow {
 
 /* .grid-item3 {
   display: inline;
-}
+}*/
 
 .grid-item1, .grid-item2, .grid-item4 {
   margin: 0 20px;
@@ -364,7 +364,7 @@ i.right-arrow {
 .footer {
   position: absolute;
   bottom: 0;
-} */
+} 
 
 /* ---Mobile------ */
 
@@ -443,6 +443,7 @@ i.right-arrow {
     justify-content: center;
     text-align: center;
     margin-bottom: 25px;
+    bottom: unset;
   }
   .footer-social-media {
     display: flex;
@@ -457,4 +458,5 @@ i.right-arrow {
   .footer-items li {
     text-align: left;
   }
+
 }
