@@ -137,8 +137,14 @@
     align-items: center;
   }
   
-  
-  
+  .deatil {
+    display: block;
+    position: absolute;
+    top: 70%;
+    padding: 5px;
+    line-height: 1;
+  }
+
  /* Mobile */
  /* The dots/bullets/indicators */
 .dot {
@@ -187,6 +193,9 @@
     display: flex;
     justify-content: center;
     position: relative;
-   
+  }
+
+  .deatil {
+    top: 100%;
   }
 }
