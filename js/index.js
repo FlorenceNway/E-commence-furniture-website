@@ -22,17 +22,8 @@ const start = () => {
     const home = document.getElementById('Home')
     home.className += " active";
     home.style.display='block'
-
-    if(window.screen.width < 600) {
-      console.log(screen.width)
-      if(Shoppage.style.display =='block') {
-        sortOptionsContainer.style.display = 'block'
-      } else if(Homepage.style.display == 'block') {
-        sortOptionsContainer.style.display = 'none'
-      }
-    }
 }
-start()
+
 
 const openTab = (e, tabName) => {
   let i, tabcontent, tablinks;
@@ -74,7 +65,6 @@ const closeNav = () => {
 
   showProducts.style.display = 'flex'
   filter.style.display = 'none'
-
 }  
 
 const leftMenuBarsIcon = () => {
@@ -93,11 +83,6 @@ const leftMenuBarsIcon = () => {
 } 
 
 const rightMenuBarsIcon = () => { 
-  if(Shoppage.style.display =='block') {
-    sortOptionsContainer.style.display = 'block'
-  } else if(Homepage.style.display == 'block') {
-    sortOptionsContainer.style.display = 'none'
-  }
   container.classList.add("overlay");
   cartqty.style.color = 'black'
   closebtn.innerText = 'X'
@@ -179,7 +164,7 @@ sliderLeft.addEventListener("change",fromSliderLeft);
 sliderRight.addEventListener("change",toSliderRight);
 
 
-
+start()
 renderNewCartSize()
 renderProducts(PRODUCTS)
 renderColors(PRODUCTS)
