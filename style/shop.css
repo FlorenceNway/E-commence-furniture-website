@@ -92,9 +92,7 @@
   display: inline-block;
   background-color: aqua;
 }
-.panel {
-  background: black;
-}
+
 
 @media screen and (max-width: 600px) {
   .filters{
