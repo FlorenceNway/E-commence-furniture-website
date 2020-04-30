@@ -6,7 +6,6 @@
   .panel {
     padding: 0 18px;
     display: none;
-    background-color: white;
     overflow: hidden;
   }
   
@@ -129,8 +128,6 @@
     font-size: 0.9em;
   }
  
-
-
   .grid-item2 {
     display: flex;
     flex-direction: column;
