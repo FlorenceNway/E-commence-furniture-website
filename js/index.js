@@ -22,6 +22,15 @@ const start = () => {
     const home = document.getElementById('Home')
     home.className += " active";
     home.style.display='block'
+
+    if(window.screen.width < 600) {
+      console.log(screen.width)
+      if(Shoppage.style.display =='block') {
+        sortOptionsContainer.style.display = 'block'
+      } else if(Homepage.style.display == 'block') {
+        sortOptionsContainer.style.display = 'none'
+      }
+    }
 }
 start()
 
@@ -39,9 +48,13 @@ const openTab = (e, tabName) => {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
 
-  // if(tabName == 'Shop') {
-  //   sortOptionsContainer.style.display = 'flex'
-  // } 
+  if(window.screen.width < 600) {
+    if(tabName =='Home' || tabName == 'Magazine') {
+      sortOptionsContainer.style.display = 'none'
+    } else {
+      sortOptionsContainer.style.display = 'block'
+    }
+  }
 
   document.getElementById(tabName).style.display = "block";
   e.currentTarget.className += " active";
@@ -76,10 +89,15 @@ const leftMenuBarsIcon = () => {
   row2.style.display = 'none'
   row3.style.display = 'none'
   row4.style.display = 'none'
-
+  
 } 
 
-const rightMenuBarsIcon = () => {
+const rightMenuBarsIcon = () => { 
+  if(Shoppage.style.display =='block') {
+    sortOptionsContainer.style.display = 'block'
+  } else if(Homepage.style.display == 'block') {
+    sortOptionsContainer.style.display = 'none'
+  }
   container.classList.add("overlay");
   cartqty.style.color = 'black'
   closebtn.innerText = 'X'
