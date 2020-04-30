@@ -123,11 +123,8 @@
 
   .panel {
     background: white;
+    line-height: 1;
   } 
-  /* .leftMenuBars {
-    display: none;
-  }
-
  
 
   .grid-item2 {
