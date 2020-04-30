@@ -121,12 +121,17 @@
     color: white;
   }
 
-  .panel {
-    background: white;
+  .filter .panel {
+    background:black;
+  } 
+
+  .deatils .panel {
+    background:white;
     line-height: 1;
     font-size: 0.9em;
-  } 
+  }
  
+
 
   .grid-item2 {
     display: flex;
