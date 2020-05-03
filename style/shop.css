@@ -63,10 +63,6 @@
     background-color: #fff;
     padding: 0 1em; 
   }
-  
-  /* .mobile-select {
-    display: none;
-  } */
 
   .filter-img-div {
     display: flex;
@@ -103,6 +99,7 @@
 
   .items {
     justify-content: center;
+    margin-top: 40px;
   } 
 
   .show-products {
@@ -133,15 +130,8 @@
     flex-direction: column;
   }
 
-  /* .mobile-left-menu #shop.active #sort-options {
-    display: block;
-  }  */
   .sort-options {
     display: block;
   }
-
-  /* .mobile-select {
-    display: block;
-  } */ 
 
 }
