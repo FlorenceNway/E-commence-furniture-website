@@ -290,10 +290,6 @@ i.right-arrow {
   white-space: nowrap;
 }
 
-/* .option:hover {
-  background: rgb(250, 250, 250);
-} */
-
 .select:focus .option {
   position: relative;
   pointer-events: all;
@@ -364,14 +360,6 @@ i.right-arrow {
 }
 
 /* =============================================================== */
-/* #pageWrapper {
-  display: flex;
-  flex-direction: column;
-} */
-
-/* .grid-item3 {
-  display: inline;
-}*/
 
 .grid-item1, .grid-item2 {
   margin: 0 20px;
