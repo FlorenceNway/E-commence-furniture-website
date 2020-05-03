@@ -145,6 +145,12 @@
     line-height: 1;
   }
 
+  .detail-p {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+
  /* Mobile */
  /* The dots/bullets/indicators */
 .dot {
