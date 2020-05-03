@@ -269,6 +269,7 @@ i.right-arrow {
   width: 350px;
   height: 52px;
   border-bottom: 1px solid #a7a6a6;
+  cursor: pointer;
 }
 
 .option {
@@ -301,7 +302,6 @@ i.right-arrow {
 .select input {
   opacity: 0;
   position: absolute;
-  left: -99999px;
 }
 
 .select input:checked + label {
