@@ -1,6 +1,6 @@
 # E-Commerce Project
 
-github link : https://florencenway.github.io/e-commence-furniture-website/
+website link : https://florencenway.github.io/e-commence-furniture-website/
 
 This is the website for a furniture store. The mockups have been created by professional web designers.
 
