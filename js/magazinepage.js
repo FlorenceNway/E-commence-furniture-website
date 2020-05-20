@@ -36,7 +36,7 @@ const renderProductDetails = product => {
     }
 
     let imageIndex = 0
-    const images = ['./img/furniture1.jpg','./img/bedroom2.jpg','./img/furniture1.jpg','./img/furniture2.jpg']
+    const images = ['./img/bedroom1.jpg','./img/bedroom2.jpg','./img/furniture1.jpg','./img/furniture2.jpg']
 
     productImage.src = images[imageIndex]
     console.log(images[imageIndex])
