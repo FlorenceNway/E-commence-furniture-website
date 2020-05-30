@@ -6,7 +6,6 @@ This is the website for a furniture store. The mockups have been created by prof
 
 The product data is in `products.js`.
 
-[Link to mockups](https://www.figma.com/file/P6jTYHEAFjm7Dm6d0E9oMr/E_COM)
 
 ## pages
 
