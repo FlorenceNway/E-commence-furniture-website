@@ -7,7 +7,7 @@ This is the website for a furniture store. The mockups have been created by prof
 The product data is in `products.js`.
 
 
-## pages
+## Pages
 
 - Desktop
     - Main
@@ -18,7 +18,7 @@ The product data is in `products.js`.
     - Product Listing Page
     - Product Details Page
 
-## functionality
+## Functionality
 
 - Color, category and price range filters must update the list of products in real time
 - Products can be sorted three ways: Default, Price: highest first, Price: lowest first. Selecting a sort option must update the list of products in real time
